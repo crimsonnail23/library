@@ -11,17 +11,17 @@ const typeDefs=gql`
         savedBooks: [Book]
     }
     type Book{
-        bookId: ID #i don't know if this is right.
+        bookId: ID!
         authors:[String]
         description: String
         title:String
-        image: url #i don't know if is right.
-        link: url
+        image: String
+        link: String
     }
     type Auth{
         token: ID!
         user: User
     }
-`
+` 
 
 //export typeDefs.
