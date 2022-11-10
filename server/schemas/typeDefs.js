@@ -10,7 +10,7 @@ const typeDefs=gql`
         bookCount: Int
         savedBooks: [Book]
     }
-    type Book{
+    input Book{
         bookId: ID!
         authors:[String]
         description: String
@@ -30,6 +30,7 @@ const typeDefs=gql`
         addUser(username: String!, email: String!, password: String!): Auth
         saveBook(input: [authors], input: description, input: title, 
         input: bookId, input: image, input: link): User
+        removeBook(input: bookId): User
     }
 ` 
 
