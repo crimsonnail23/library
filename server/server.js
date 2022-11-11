@@ -34,15 +34,15 @@ app.use(routes);
 
 const startApolloServer = async (typeDefs, resolvers)=>{
 
-await server.start();
-//integrate apollo server with express app middleware.
-server.applyMiddleware({ app })  
-  
-db.once('open', () => {
-  app.listen(PORT, () => {
-    console.log(`🌍 Now listening on localhost:${PORT}`);
-    console.log(`use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
-  });
+    await server.start();
+    //integrate apollo server with express app middleware.
+    server.applyMiddleware({ app })  
+
+    db.once('open', () => {
+    app.listen(PORT, () => {
+      console.log(`🌍 Now listening on localhost:${PORT}`);
+      console.log(`use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+    });
 
 
 });
