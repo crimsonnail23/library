@@ -48,3 +48,6 @@ db.once('open', () => {
 });
 
 }
+
+//call the function to start the server.
+startApolloServer(typeDefs, resolvers);
