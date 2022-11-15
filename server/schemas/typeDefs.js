@@ -37,6 +37,7 @@ const typeDefs=gql`
     #the one query is for logged in users.
     type Query{
         me: User
+        
     }
     #defines the different types of mutations that will be used.
     type Mutation{
