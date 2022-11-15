@@ -27,6 +27,7 @@ export const ADD_USER = gql`
 //following code will save a book to the user's book list.
 export const SAVE_BOOK=gql`
     mutation saveBook($bookInput: BookInput){
+        # if there are errors try and change $BookInput to $bookInput
         saveBook(bookInput: $BookInput){
             _id
         username

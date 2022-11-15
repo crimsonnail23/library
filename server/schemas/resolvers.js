@@ -37,7 +37,7 @@ const resolvers={
             
             return {token, user};
         },
-        savebook: async (parent,{bookData}, context)=>{
+        saveBook: async (parent,{bookData}, context)=>{
             if(context.user){
                 const updatedUser= await User.findOneAndUpdate(
                     {_id: context.user.id},
@@ -48,7 +48,7 @@ const resolvers={
             }
             throw new AuthenticationError('you need to be logged in');
         },
-        removebook: async (parent,{bookData},context)=>{
+        removeBook: async (parent,{bookData},context)=>{
             if(context.user){
                 const updatedUser = await User.findOneAndUpdate(
                     {_id: context.user.id},
