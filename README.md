@@ -4,6 +4,9 @@ For this I refactored code to use GraphQL/ApolloServer instead of a RESTful API.
 
 # sites:
 
+deployed:
+https://thawing-fjord-63272.herokuapp.com/ 
+
 Git Hub repo:
 https://github.com/crimsonnail23/library
 
