@@ -18,7 +18,7 @@ const resolvers={
     },
     Mutation:{
         login: async (parent, {email,password})=>{
-            const user = await User.fineOne({ email });
+            const user = await User.findOne({ email });
             if(!user){
                 throw new AuthenticationError('incorrect credentials')
             }
