@@ -3,6 +3,7 @@ const{gql} = require('apollo-server-express')
 
 //define the typeDefs
 const typeDefs=gql`
+    # defines the user.
     type User{
         _id: ID
         username: String
@@ -10,6 +11,7 @@ const typeDefs=gql`
         bookCount: Int
         savedBooks: [Book]
     }
+    # defines the book. 
     type Book{
         bookId: ID!
         authors:[String]
@@ -18,6 +20,7 @@ const typeDefs=gql`
         image: String
         link: String
     }
+    # used for authentication.
     type Auth{
         token: ID!
         user: User
@@ -30,9 +33,12 @@ const typeDefs=gql`
         image: String
         link: String
     }
+    #defines the different types of queries, though only one is currently there.
+    #the one query is for logged in users.
     type Query{
         me: User
     }
+    #defines the different types of mutations that will be used.
     type Mutation{
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
